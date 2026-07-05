@@ -1,0 +1,8 @@
+/* src/styles/mixins.css */
+
+/* Utility class for accessible focus outline */
+/* This can be applied to elements that need a consistent focus indicator */
+.focus-ring {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

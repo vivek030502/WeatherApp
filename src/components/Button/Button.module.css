@@ -1,0 +1,67 @@
+/* src/components/Button/Button.module.css */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  border-radius: var(--border-radius-sm);
+  transition: background-color var(--transition-speed-fast) var(--transition-easing),
+              color var(--transition-speed-fast) var(--transition-easing),
+              border-color var(--transition-speed-fast) var(--transition-easing);
+  text-decoration: none; /* In case it's used with an anchor */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: inherit; /* Ensure font is inherited */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  border-color: var(--color-border-primary);
+}
+
+.primary:hover:not(.disabled) {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text-light);
+  border-color: var(--color-border-secondary);
+}
+
+.secondary:hover:not(.disabled) {
+  background-color: var(--color-secondary-hover);
+  border-color: var(--color-secondary-hover);
+}
+
+.ghost {
+  background-color: var(--color-ghost);
+  color: var(--color-text-dark);
+  border-color: var(--color-text-dark); /* Border matching text color */
+}
+
+.ghost:hover:not(.disabled) {
+  background-color: var(--color-ghost-hover);
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  background-color: var(--color-disabled-background) !important;
+  color: var(--color-disabled-text) !important;
+  border-color: var(--color-disabled-border) !important;
+}
