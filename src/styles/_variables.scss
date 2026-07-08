@@ -1,0 +1,31 @@
+// Color Palette
+$color-primary: #8d69cf; // From existing card background gradient start
+$color-secondary: #473072; // From existing card background gradient end
+$color-text-light: #fff; // From existing text color
+$color-text-dark: #555; // From existing input text color
+$color-background-light: #ebfffc; // From existing input/button background
+$color-background-dark: #222; // From existing body background
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// Border Radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 20px; // From existing card border-radius
+$border-radius-circle: 50%; // From existing search button
+
+// Font Sizes
+$font-size-sm: 14px;
+$font-size-md: 18px; // From existing input font size
+$font-size-lg: 28px; // From existing humidity/wind font size
+$font-size-xl: 45px; // From existing h2 font size
+$font-size-xxl: 80px; // From existing h1 font size
+
+// Shadows
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);

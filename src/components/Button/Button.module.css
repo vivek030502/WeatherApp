@@ -1,0 +1,99 @@
+/* src/components/Button/Button.module.css */
+.button {
+  /* Inherit from _variables.scss based on common patterns */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 25px; /* Similar to search input padding */
+  height: 60px; /* Similar to search input height */
+  border: none;
+  border-radius: 30px; /* Similar to search input/button border-radius */
+  font-family: Georgia, 'Times New Roman', Times, serif; /* Inherit from body */
+  font-size: 18px; /* Similar to search input font-size */
+  cursor: pointer;
+  background-color: #ebfffc; /* light background from search input/button */
+  color: #555; /* dark text color from search input */
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+  min-width: 60px; /* To accommodate icon-only buttons */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* light shadow */
+}
+
+.button:hover:not(:disabled) {
+  background-color: #e0f0f0; /* Slightly darker hover */
+}
+
+.button:active:not(:disabled) {
+  background-color: #d0e0e0; /* Even darker active */
+  transform: translateY(1px);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Primary variant */
+.primary {
+  background: linear-gradient(135deg, #8d69cf, #473072); /* From existing card background */
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #7c5baa, #3c2a60);
+}
+
+.primary:active:not(:disabled) {
+  background: linear-gradient(135deg, #6b4c91, #312350);
+}
+
+/* Secondary variant (could be an outline, or different color) */
+/* For now, just a lighter variant of primary */
+.secondary {
+  background-color: #f0eafb;
+  color: #8d69cf;
+  border: 1px solid #8d69cf;
+  box-shadow: none;
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: #e6ddf7;
+}
+
+.secondary:active:not(:disabled) {
+  background-color: #dcd0f3;
+}
+
+/* Small button size */
+.small {
+  padding: 8px 16px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
+/* Large button size */
+.large {
+  padding: 12px 30px;
+  height: 70px;
+  font-size: 20px;
+  border-radius: 35px;
+}
+
+.icon {
+  width: 16px; /* Similar to search button img */
+  height: 16px;
+  margin-right: 8px;
+}
+
+.iconOnly {
+  padding: 0;
+  width: 60px; /* Similar to search button */
+  height: 60px;
+  border-radius: 50%; /* Circular for icon-only */
+  flex-shrink: 0; /* Prevent shrinking if inside flex container */
+}
+
+.iconOnly .icon {
+  margin-right: 0;
+}
